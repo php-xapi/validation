@@ -1,9 +1,9 @@
 {
-    "name": "xabbuh/xapi",
+    "name": "xabbuh/xapi-validator",
     "type": "library",
-    "description": "libraries for the Experience API (xAPI) implemented in PHP",
-    "keywords": ["xAPI", "Experience API", "Tin Can API", "library"],
-    "homepage": "https://github.com/xabbuh/xapi",
+    "description": "Experience API model validator",
+    "keywords": ["xAPI", "Experience API", "Tin Can API", "validator", "validation"],
+    "homepage": "https://github.com/xabbuh/xapi-validator",
     "license": "MIT",
     "authors": [
         {
@@ -13,36 +13,18 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "guzzle/guzzle": "~3.7",
-        "jms/serializer": "~0.16",
-        "jms/serializer-bundle": "~0.9",
-        "symfony/config": "~2.2",
-        "symfony/dependency-injection": "~2.2",
-        "symfony/http-kernel": "~2.2",
-        "symfony/http-foundation": "~2.2",
-        "symfony/validator": "~2.5"
+        "symfony/config": "~2.3",
+        "symfony/validator": "~2.5",
+        "xabbuh/xapi-model": "~1.0"
     },
     "require-dev": {
-        "doctrine/mongodb-odm": "~1.0",
-        "doctrine/mongodb-odm-bundle": "~3.0",
-        "matthiasnoback/symfony-dependency-injection-test": "~0.6",
-        "symfony/property-access": "~2.2"
-    },
-    "replace": {
-        "xabbuh/xapi-client": "self.version",
-        "xabbuh/xapi-client-bundle": "self.version",
-        "xabbuh/xapi-common": "self.version",
-        "xabbuh/xapi-data-fixtures": "self.version",
-        "xabbuh/xapi-doctrine-storage": "self.version",
-        "xabbuh/xapi-lrs-bundle": "self.version",
-        "xabbuh/xapi-model": "self.version",
-        "xabbuh/xapi-mongodb-storage-api": "self.version",
-        "xabbuh/xapi-storage-api": "self.version"
+        "doctrine/annotations": "~1.0",
+        "symfony/property-access": "~2.3",
+        "xabbuh/xapi-data-fixtures": "~1.0"
     },
     "autoload": {
         "psr-4": {
-            "Xabbuh\\XApi\\": "",
-            "Xabbuh\\XApi\\Model\\": "Model/src/"
+            "Xabbuh\\XApi\\Validator\\": "src/"
         }
     },
     "minimum-stability": "dev",

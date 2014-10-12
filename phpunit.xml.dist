@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true" bootstrap="vendor/autoload.php">
+<phpunit colors="true" bootstrap="tests/bootstrap.php">
     <testsuites>
-        <testsuite name="collection of Experience API libraries">
-            <directory>./Bundle/*/Tests</directory>
-            <directory>./*/Tests</directory>
+        <testsuite name="Experience API model validator">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory>.</directory>
             <exclude>
-                <directory>./*/doc</directory>
-                <directory>./*/Exception</directory>
-                <directory>./*/Tests</directory>
-                <directory>./*/vendor</directory>
-                <directory>./Bundle/*/Resources</directory>
-                <directory>./Bundle/*/Tests</directory>
+                <directory>./metadata</directory>
+                <directory>./tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>

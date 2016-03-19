@@ -1,9 +1,9 @@
 {
-    "name": "xabbuh/xapi-validator",
+    "name": "php-xapi/validation",
     "type": "library",
-    "description": "Experience API model validator",
+    "description": "Experience API domain object validation",
     "keywords": ["xAPI", "Experience API", "Tin Can API", "validator", "validation"],
-    "homepage": "https://github.com/php-xapi/xapi-validator",
+    "homepage": "https://github.com/php-xapi/validation",
     "license": "MIT",
     "authors": [
         {
@@ -22,6 +22,9 @@
         "php-xapi/test-fixtures": "~0.1",
         "symfony/property-access": "~2.3"
     },
+    "conflict": {
+        "xabbuh/xapi-validator": "*"
+    },
     "autoload": {
         "psr-4": {
             "Xabbuh\\XApi\\Validator\\": "src/"
@@ -34,7 +37,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2.x-dev"
+            "dev-master": "0.1.x-dev"
         }
     }
 }

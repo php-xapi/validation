@@ -28,14 +28,9 @@ abstract class AbstractModelValidatorTest extends \PHPUnit_Framework_TestCase
     {
         $validatorBuilder = Validation::createValidatorBuilder();
 
-        $errorReporting = error_reporting();
-        error_reporting($errorReporting & ~E_USER_DEPRECATED);
-
         if (method_exists($validatorBuilder, 'setApiVersion')) {
             $validatorBuilder->setApiVersion(Validation::API_VERSION_2_5);
         }
-
-        error_reporting($errorReporting);
 
         $this->validator = $validatorBuilder
             ->addXmlMapping(__DIR__.'/../metadata/Activity.xml')

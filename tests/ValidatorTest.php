@@ -41,7 +41,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $this->validateXApiValidator(Validator::createValidator());
     }
 
-    private function validateXApiValidator(ValidatorInterface $validator)
+    private function validateXApiValidator($validator)
     {
         if ($validator instanceof MetadataFactoryInterface) {
             $metadataFactory = $validator;

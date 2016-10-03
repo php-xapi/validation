@@ -12,6 +12,7 @@
 namespace Xabbuh\XApi\Validator\Tests;
 
 use Xabbuh\XApi\DataFixtures\ActorFixtures;
+use Xabbuh\XApi\Model\Group;
 
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
@@ -21,8 +22,8 @@ class GroupValidatorTest extends AbstractModelValidatorTest
     public function getObjectsToValidate()
     {
         return array(
-            array(ActorFixtures::getAnonymousGroup(), 0, array('anonymous')),
-            array(ActorFixtures::getGroup(), 0, array('identified')),
+            array(new Group(null, null, array(ActorFixtures::getTypicalAgent())), 0, array('anonymous')),
+            array(ActorFixtures::getTypicalGroup(), 0, array('identified')),
         );
     }
 }

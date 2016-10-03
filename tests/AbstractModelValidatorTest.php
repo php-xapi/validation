@@ -36,7 +36,9 @@ abstract class AbstractModelValidatorTest extends \PHPUnit_Framework_TestCase
             ->addXmlMapping(__DIR__.'/../metadata/Activity.xml')
             ->addXmlMapping(__DIR__.'/../metadata/Agent.xml')
             ->addXmlMapping(__DIR__.'/../metadata/Group.xml')
+            ->addXmlMapping(__DIR__.'/../metadata/IRI.xml')
             ->addXmlMapping(__DIR__.'/../metadata/Statement.xml')
+            ->addXmlMapping(__DIR__.'/../metadata/StatementId.xml')
             ->addXmlMapping(__DIR__.'/../metadata/StatementReference.xml')
             ->getValidator();
     }

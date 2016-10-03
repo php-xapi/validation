@@ -6,7 +6,7 @@
 
     <class name="Xabbuh\XApi\Model\StatementReference">
         <property name="statementId">
-            <constraint name="NotBlank" />
+            <constraint name="Valid" />
         </property>
     </class>
 </constraint-mapping>

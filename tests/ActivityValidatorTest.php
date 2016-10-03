@@ -13,6 +13,7 @@ namespace Xabbuh\XApi\Validator\Tests;
 
 use Xabbuh\XApi\DataFixtures\ActivityFixtures;
 use Xabbuh\XApi\Model\Activity;
+use Xabbuh\XApi\Model\IRI;
 
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
@@ -22,8 +23,8 @@ class ActivityValidatorTest extends AbstractModelValidatorTest
     public function getObjectsToValidate()
     {
         return array(
-            array(ActivityFixtures::getActivity(), 0),
-            array(new Activity(), 1),
+            array(ActivityFixtures::getTypicalActivity(), 0),
+            array(new Activity(IRI::fromString('')), 1),
         );
     }
 }

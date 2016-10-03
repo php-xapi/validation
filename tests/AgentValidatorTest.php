@@ -13,6 +13,8 @@ namespace Xabbuh\XApi\Validator\Tests;
 
 use Xabbuh\XApi\DataFixtures\ActorFixtures;
 use Xabbuh\XApi\Model\Agent;
+use Xabbuh\XApi\Model\InverseFunctionalIdentifier;
+use Xabbuh\XApi\Model\IRI;
 
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
@@ -22,8 +24,7 @@ class AgentValidatorTest extends AbstractModelValidatorTest
     public function getObjectsToValidate()
     {
         return array(
-            array(ActorFixtures::getAgent(), 0),
-            array(new Agent(), 1),
+            array(ActorFixtures::getTypicalAgent(), 0),
         );
     }
 }

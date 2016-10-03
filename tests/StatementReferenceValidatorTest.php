@@ -11,6 +11,8 @@
 
 namespace Xabbuh\XApi\Validator\Tests;
 
+use Rhumsaa\Uuid\Uuid;
+use Xabbuh\XApi\Model\StatementId;
 use Xabbuh\XApi\Model\StatementReference;
 
 /**
@@ -20,12 +22,10 @@ class StatementReferenceValidatorTest extends AbstractModelValidatorTest
 {
     public function getObjectsToValidate()
     {
-        $withStatementId = new StatementReference(md5(uniqid()));
-        $withoutStatementId = new StatementReference(null);
+        $withStatementId = new StatementReference(StatementId::fromUuid(Uuid::uuid4()));
 
         return array(
             array($withStatementId, 0),
-            array($withoutStatementId, 1),
         );
     }
 }

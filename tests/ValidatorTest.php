@@ -22,7 +22,7 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
 {
     public function testRegisterXApiConstraints()
     {
-        $validatorBuilder = $this->getMock('\Symfony\Component\Validator\ValidatorBuilderInterface');
+        $validatorBuilder = $this->getMockBuilder('\Symfony\Component\Validator\ValidatorBuilderInterface')->getMock();
         $validatorBuilder->expects($this->once())
             ->method('addXmlMappings');
 

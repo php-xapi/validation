@@ -25,6 +25,8 @@ matrix:
       env: validator=3.4.*
     - php: 7.0
       env: xdebug="yes"
+    - php: 7.1
+    - php: 7.2
 
 before_install:
   - if [[ "$TRAVIS_PHP_VERSION" != "hhvm" && "$xdebug" != "yes" ]]; then phpenv config-rm xdebug.ini; fi

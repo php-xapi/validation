@@ -11,13 +11,14 @@
 
 namespace Xabbuh\XApi\Validator\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
  */
-abstract class AbstractModelValidatorTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractModelValidatorTest extends TestCase
 {
     /**
      * @var Validator
@@ -27,10 +28,6 @@ abstract class AbstractModelValidatorTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $validatorBuilder = Validation::createValidatorBuilder();
-
-        if (method_exists($validatorBuilder, 'setApiVersion')) {
-            $validatorBuilder->setApiVersion(Validation::API_VERSION_2_5);
-        }
 
         $this->validator = $validatorBuilder
             ->addXmlMapping(__DIR__.'/../metadata/Activity.xml')

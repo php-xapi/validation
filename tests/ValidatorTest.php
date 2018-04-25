@@ -11,6 +11,7 @@
 
 namespace Xabbuh\XApi\Validator\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\Mapping\Factory\MetadataFactoryInterface;
 use Symfony\Component\Validator\ValidatorInterface;
 use Xabbuh\XApi\Validator\Validator;
@@ -18,7 +19,7 @@ use Xabbuh\XApi\Validator\Validator;
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
  */
-class ValidatorTest extends \PHPUnit_Framework_TestCase
+class ValidatorTest extends TestCase
 {
     public function testRegisterXApiConstraints()
     {

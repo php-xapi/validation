@@ -10,6 +10,8 @@ CHANGELOG
 
 * allow `2.x` and `3.x` releases of the `php-xapi/model` package
 
+* add support for Symfony 4
+
 0.1.1
 -----
 

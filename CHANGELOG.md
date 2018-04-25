@@ -4,7 +4,10 @@ CHANGELOG
 0.2.0
 -----
 
+* drop support for HHVM and PHP < 5.6
+
 * made the package compatible with `3.x` releases of `ramsey/uuid`
+
 * allow `2.x` releases of the `php-xapi/model` package too
 
 0.1.1

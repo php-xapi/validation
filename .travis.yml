@@ -22,6 +22,7 @@ matrix:
       env: xdebug="yes"
     - php: 7.1
     - php: 7.2
+      env: SYMFONY_PHPUNIT_VERSION=7.5
 
 before_install:
   - if [[ "$xdebug" != "yes" ]]; then phpenv config-rm xdebug.ini; fi
